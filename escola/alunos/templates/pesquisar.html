@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/../static/styles/style.css">
+    <title>Pesquisar</title>
+</head>
+<body>
+    <h1>Pesquisar Alunos</h1>
+    <form method="GET">
+        <input type="text" name="nome" placeholder="Nome do Aluno">
+        <button type="submit">pesquisar</button>
+    </form>
+
+    <ul>
+    {%for aluno in alunos%}
+        <li>
+            <span>{{aluno.nome }} {{ aluno.matricula}}</span>
+        </li>
+        {%empty%}
+        <p>Não encontrado!</p>
+        {%endfor%}
+    </ul>
+</body>
+</html>

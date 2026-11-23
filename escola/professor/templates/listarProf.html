@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/../static/styles/style.css">
+    <title>Listar</title>
+</head>
+<body>
+    <h1>Listar</h1>
+    <ul>
+        {%for professor in professor%}
+            <li>
+                <span>{{professor.nome}}</span>
+                <span>{{professor.email}}</span> 
+            </li>
+        {%endfor%}
+    </ul>
+</body>
+</html>

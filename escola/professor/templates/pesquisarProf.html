@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/../static/styles/style.css">
+    <title>Pesquisar</title>
+</head>
+<body>
+    <h1>Pesquisar Professor</h1>
+    <form method="GET">
+        <input type="text" name="nome" placeholder="Nome do Aluno">
+        <button type="submit">pesquisar</button>
+    </form>
+
+    <ul>
+    {%for professor in professor%}
+        <li>
+            <span>{{professor.nome }} {{ professor.email}}</span>
+        </li>
+        {%empty%}
+        <p>Não encontrado!</p>
+        {%endfor%}
+    </ul>
+</body>
+</html>
